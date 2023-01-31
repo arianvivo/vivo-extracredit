@@ -1,0 +1,7 @@
+.navigation-bar{
+    background-color: rgb(156, 71, 235);
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    width: 100%;
+}

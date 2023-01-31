@@ -1,0 +1,14 @@
+.menu-bar-ul {
+    display: flex;
+    justify-content: center;
+}
+a {
+    text-decoration: none;
+
+}
+li {
+    color:black;
+    font-size: 25px;
+    list-style: none;
+    margin: auto 20px;
+}
