@@ -1,0 +1,10 @@
+.widget-container {
+    display: flex;
+    justify-content: right;
+    margin-right: 30px;
+    width: 50px;
+}
+
+.cart-widget {
+    height: 100%;
+}
