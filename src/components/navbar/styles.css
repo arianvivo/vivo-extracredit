@@ -6,7 +6,7 @@
     justify-content: space-between;
 }
 
-.logo-img{
+.logo-link-container{
     height: 100%;
     width: auto;
     margin-left: 20px;
@@ -18,13 +18,13 @@
     justify-content: space-around;
 }
 
-.navlink-container button {
+.navlink-container .nav-link {
     font-size: 2em;
     background: none;
     border: 0;
     color: rgb(32, 32, 32);
 }
-.navlink-container button:hover {
+.navlink-container .nav-link:hover {
     color: rgb(0, 150, 0);
     cursor: pointer;
 }
