@@ -1,13 +1,35 @@
 article {
-    border: 2px solid black;
     width: 300px;
     height: 500px;
-    background-color: rgba(255, 255, 255, 0.747);
+    background-color: rgb(205, 162, 224);
     padding: 10px;
     margin-bottom: 20px;
+    border: 3px solid rgb(0, 150, 0);
+    border-radius: 20px;
 }
 
 img {
     max-width:100%;
     max-height:100%;
+}
+
+.Info {
+
+    font-family: 'Ubuntu', sans-serif;
+    font: bold 11px;
+}
+
+.ItemFooter a {
+    text-decoration: none;
+}
+
+.detail-text {
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: none;
+    color: rgb(0, 150, 0);
+}
+
+.detail-text:hover{
+    color: rgb(107, 35, 141);
 }
