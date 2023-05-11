@@ -11,8 +11,6 @@ const ItemListContainer = ({greeting}) => {
 
     const [products, setProducts] = useState([])
 
-    console.log(products)
-
     const {categoryId} = useParams()
 
     useEffect (() => {

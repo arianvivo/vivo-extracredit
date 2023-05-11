@@ -3,3 +3,16 @@
     width: 600px;
     height: 800px;
 }
+
+.finish-purchase {
+    background-color: rgb(157, 51, 206);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.finish-purchase:hover, .count-controls button:hover {
+    border: 2px solid rgb(0, 150, 0);
+    cursor: pointer;
+}
