@@ -6,7 +6,7 @@ import './styles.css'
 
 const CartItem = ({id, name, img, price, quantity}) => {
 
-    const {clearCart, removeItem} = useContext(CartContext)
+    const { removeItem } = useContext(CartContext)
 
     return (
         <article className="CartItem">

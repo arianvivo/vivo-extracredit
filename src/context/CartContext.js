@@ -19,7 +19,7 @@ export const CartProvider = ({children}) => {
         cart.map( prod => {
           total += (prod.price * prod.quantity) 
         })
-          setTotalPrice(total)
+        setTotalPrice(total)
     }, [cart])
 
     const addItem = (item, quantity) => {
