@@ -4,6 +4,18 @@
     height: 800px;
 }
 
+.finish-purchase-container {
+    width: 300px;
+    
+    border: 2px solid black;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.747);
+    margin: 40px auto;
+    padding: 20px;
+    border: 3px solid rgb(0, 150, 0);
+    border-radius: 20px;
+}
+
 .finish-purchase {
     background-color: rgb(157, 51, 206);
     font-size: 20px;
