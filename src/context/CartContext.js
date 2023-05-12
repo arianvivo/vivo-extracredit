@@ -7,10 +7,20 @@ export const CartProvider = ({children}) => {
     const [cart, setCart] = useState([])
 
     const [totalQuantity, setTotalQuantity] = useState(0);
-    
+
+    const [totalPrice, setTotalPrice] = useState(0);
+
     useEffect ( () => {
         console.log("Carrito actualizado: " + totalQuantity)
     }, [totalQuantity]) 
+
+    useEffect ( () => {
+        let total = 0
+        cart.map( prod => {
+          total += (prod.price * prod.quantity) 
+        })
+          setTotalPrice(total)
+    }, [cart])
 
     const addItem = (item, quantity) => {
 
@@ -24,10 +34,6 @@ export const CartProvider = ({children}) => {
             console.log("Error: El producto ya fué agregado")
         }
 
-    }
-
-    const total = () => {
-            console.log("Total: " + totalQuantity)
     }
 
     const removeItem = (itemId) => {
@@ -47,7 +53,7 @@ export const CartProvider = ({children}) => {
     }
 
     return (
-        <CartContext.Provider value={{cart,addItem,removeItem,clearCart, totalQuantity, total}}>
+        <CartContext.Provider value={{cart,addItem,removeItem,clearCart, totalQuantity, totalPrice}}>
             {children}
         </CartContext.Provider>
     )

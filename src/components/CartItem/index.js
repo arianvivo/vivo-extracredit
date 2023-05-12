@@ -4,7 +4,7 @@ import { useContext } from "react"
 import './styles.css'
 
 
-const CartItem = ({id, name, img, price}) => {
+const CartItem = ({id, name, img, price, quantity}) => {
 
     const {clearCart, removeItem} = useContext(CartContext)
 
@@ -20,7 +20,13 @@ const CartItem = ({id, name, img, price}) => {
             </picture>
             <section>
                 <p className="Info">
-                    Precio: ${price}
+                    Precio unitario: ${price}
+                </p>
+                <p className="info">
+                    Cantidad: {quantity}
+                </p>
+                <p className="info">
+                    Total: ${quantity*price}
                 </p>
             </section>
 

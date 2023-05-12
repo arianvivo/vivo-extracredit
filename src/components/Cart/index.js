@@ -6,7 +6,7 @@ import './styles.css'
 
 const Cart = () => {
 
-    const {cart, clearCart, totalQuantity, total} = useContext(CartContext);
+    const {cart, clearCart, totalQuantity, totalPrice} = useContext(CartContext);
 
 
     if (totalQuantity === 0){
@@ -24,7 +24,7 @@ const Cart = () => {
 
             {console.log("Checking cart: " + cart)}
 
-            <h3>Total: ${total}</h3>
+            <h3>Total: ${totalPrice}</h3>
             <button onClick={() => clearCart()} className="Button">Limpiar carrito</button>
             <Link to='/checkout' className="Option">Checkout</Link>
         </div>
