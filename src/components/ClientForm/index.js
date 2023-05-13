@@ -1,7 +1,11 @@
 import { useState, useEffect } from 'react'
 import './styles.css'
 
-const ClientForm = () => {
+import { addDoc, collection, getFirestore } from 'firebase/firestore'
+import { db } from "../../services/firebase/firebaseConfig";
+
+
+const ClientForm = ({onConfirm}) => {
 
     const [nombre, setNombre] = useState('')
     const [apellido, setApellido] = useState('')
@@ -83,9 +87,20 @@ const ClientForm = () => {
 
     }, [isValidNombre, isValidApellido, isValidTelefono, isValidMail])
 
+    const handleConfirm = (evt) => {
+        evt.preventDefault();
+
+        const userData = {
+            nombre, telefono, email
+        }
+
+        onConfirm(userData);
+
+    }
+
 
     return (
-        <form className='client-form'>
+        <form className='client-form' onSubmit={handleConfirm}>
             <section className='mail-validation'>
                 <input type='text' placeholder='Nombre' value={nombre} onChange={handleNombre} />
                 <span> { isValidNombre ? "✔️"  : "❌ " }</span>
@@ -109,8 +124,7 @@ const ClientForm = () => {
                 <span> { isValidMail ? "✔️"  : "❌ " }</span>
             </section>
 
-            <button className='confirmar' disabled={ isEverytingValid ? false : true }>Confirmar compra!</button>
-
+            <button className='confirmar' disabled={ isEverytingValid ? false : true } type='submit' onClick={onConfirm}>Confirmar compra!</button>
         </form>
     )
 }
