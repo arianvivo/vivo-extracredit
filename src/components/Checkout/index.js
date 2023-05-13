@@ -3,6 +3,7 @@ import Table from 'react-bootstrap/Table';
 import { useContext } from 'react';
 import { CartContext } from '../../context/CartContext';
 import { Button } from 'bootstrap';
+import ClientForm from '../ClientForm';
 
 
 const Checkout = ({props}) => {
@@ -42,7 +43,7 @@ const Checkout = ({props}) => {
                 <div>
                     TOTAL: {totalPrice}
                 </div>
-                <button>Proceder con la compra</button>
+                <ClientForm />
         </div>
         )
     }

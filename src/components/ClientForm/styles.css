@@ -1,0 +1,38 @@
+.client-form{
+    background-color: aliceblue;
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+section {
+    margin: 10px auto;
+}
+
+.mail-validation {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;    
+}
+
+section input {
+    width: 80%;
+    margin-left: 20px;
+}
+
+button {
+    background-color: rgb(157, 51, 206);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+button:hover {
+    border: 2px solid rgb(0, 150, 0);
+    cursor: pointer;
+}
